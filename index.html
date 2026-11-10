@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Adit & Marella</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #10100e;
+    color: #f5e8c8;
+    font-family: Georgia, serif;
+    text-align: center;
+}
+
+.cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background: linear-gradient(#0009,#000b),
+    url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1200') center/cover;
+}
+
+.small {
+    letter-spacing: 5px;
+    font-size: 12px;
+}
+
+h1 {
+    font-size: clamp(40px, 10vw, 65px);
+    color: #d9b66d;
+    margin: 20px 0;
+}
+
+h2 {
+    color: #d9b66d;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+button {
+    background: #c5a45e;
+    border: none;
+    padding: 13px 28px;
+    color: #17140e;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+section {
+    padding: 75px 20px;
+    border-bottom: 1px solid #75613a;
+}
+
+p {
+    line-height: 1.9;
+    color: #e1d5bd;
+}
+
+.names {
+    font-size: 38px;
+    color: #d9b66d;
+    margin: 20px;
+}
+
+.photo {
+    width: 220px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 110px 110px 10px 10px;
+    border: 3px solid #c5a45e;
+    margin: 20px;
+}
+
+.card {
+    border: 1px solid #aa8c4e;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 400px;
+    background: #1c1b17;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.time {
+    background: #28251c;
+    border: 1px solid #b99a57;
+    padding: 15px;
+    min-width: 70px;
+    border-radius: 10px;
+}
+
+.time strong {
+    display: block;
+    color: #d9b66d;
+    font-size: 25px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 13px;
+    margin: 8px 0;
+    background: #28251c;
+    border: 1px solid #b99a57;
+    color: white;
+    border-radius: 8px;
+}
+
+footer {
+    padding: 35px;
+    color: #b99a57;
+}
+</style>
+</head>
+
+<body>
+
+<!-- COVER -->
+<div class="cover" id="cover">
+    <p class="small">THE WEDDING OF</p>
+    <h1>ADIT &
+      MARELLA</h1>
+    <p>11 - 11 - 2026</p>
+    <p style="margin-top:20px">Kepada Yth.</p>
+    <p>Tamu Undangan</p>
+    <button onclick="bukaUndangan()">BUKA UNDANGAN</button>
+</div>
+
+<!-- CONTENT -->
+<div id="isi" style="display:none">
+
+<section>
+    <p class="small">BISMILLAHIRRAHMANIRRAHIM</p>
+    <h2>Wedding Invitation</h2>
+    <p>Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami.</p>
+
+    <div class="names">ADIT</div>
+    <p>&</p>
+    <div class="names">MARELLA</div>
+
+    <p>Merupakan suatu kehormatan bagi kami apabila Anda berkenan hadir dan memberikan doa restu.</p>
+</section>
+
+<section>
+    <h2>Our Special Day</h2>
+    <p>Menuju hari bahagia kami</p>
+
+    <div class="countdown">
+        <div class="time"><strong id="days">00</strong>Hari</div>
+        <div class="time"><strong id="hours">00</strong>Jam</div>
+        <div class="time"><strong id="minutes">00</strong>Menit</div>
+        <div class="time"><strong id="seconds">00</strong>Detik</div>
+    </div>
+</section>
+
+<section>
+    <h2>The Groom & Bride</h2>
+
+    <img class="photo"
+    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600">
+
+    <h2>ADIT</h2>
+    <p>Putra dari Bapak & Ibu</p>
+
+    <p style="font-size:30px;color:#c5a45e">&</p>
+
+    <img class="photo"
+    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600">
+
+    <h2>MARELLA</h2>
+    <p>Putri dari Bapak & Ibu</p>
+</section>
+
+<section>
+    <h2>Wedding Event</h2>
+
+    <div class="card">
+        <h2>Akad Nikah</h2>
+        <p>Rabu, 11 November 2026</p>
+        <p>08.00 WIB - Selesai</p>
+        <p>Tempat: Isi alamat acara</p>
+    </div>
+
+    <div class="card">
+        <h2>Resepsi</h2>
+        <p>Rabu, 11 November 2026</p>
+        <p>11.00 WIB - Selesai</p>
+        <p>Tempat: Isi alamat acara</p>
+    </div>
+
+    <button onclick="window.open('https://maps.google.com','_blank')">
+        LOKASI ACARA
+    </button>
+</section>
+
+<section>
+    <h2>Our Gallery</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600">
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600">
+        <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=600">
+        <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?w=600">
+    </div>
+</section>
+
+<section>
+    <h2>Love Story</h2>
+    <p>
+    Dua insan dipertemukan oleh takdir.
+    Berawal dari sebuah perkenalan sederhana,
+    tumbuh menjadi cerita yang indah.
+    Kini kami memilih untuk melangkah bersama,
+    membangun masa depan dalam ikatan suci pernikahan.
+    </p>
+</section>
+
+<section>
+    <h2>RSVP</h2>
+    <p>Konfirmasi kehadiran Anda</p>
+
+    <div class="card">
+        <input id="nama" placeholder="Nama Anda">
+
+        <select id="hadir">
+            <option value="Hadir">Saya akan hadir</option>
+            <option value="Tidak hadir">Maaf, tidak bisa hadir</option>
+        </select>
+
+        <button onclick="kirimRSVP()">KIRIM KONFIRMASI</button>
+    </div>
+</section>
+
+<section>
+    <h2>Wedding Wishes</h2>
+    <p>Merupakan kebahagiaan bagi kami atas doa dan restu yang diberikan.</p>
+    <h2 style="margin-top:30px">ADIT & MARELLA</h2>
+    <p>Thank You For Being Part Of Our Story</p>
+</section>
+
+<footer>
+    <p>© 2026 ADIT & MARELLA</p>
+    <p>Made with Love</p>
+</footer>
+
+</div>
+
+<script>
+
+// BUKA UNDANGAN
+function bukaUndangan() {
+    document.getElementById("cover").style.display = "none";
+    document.getElementById("isi").style.display = "block";
+    window.scrollTo(0,0);
+}
+
+// COUNTDOWN
+// Ubah tanggal sesuai hari pernikahan
+const tanggal = new Date("November 11, 2026 08:00:00").getTime();
+
+setInterval(function() {
+    let sekarang = new Date().getTime();
+    let selisih = tanggal - sekarang;
+
+    if(selisih <= 0) {
+        document.getElementById("days").innerText = "00";
+        return;
+    }
+
+    document.getElementById("days").innerText =
+    Math.floor(selisih / (1000*60*60*24));
+
+    document.getElementById("hours").innerText =
+    Math.floor((selisih % (1000*60*60*24))/(1000*60*60));
+
+    document.getElementById("minutes").innerText =
+    Math.floor((selisih % (1000*60*60))/(1000*60));
+
+    document.getElementById("seconds").innerText =
+    Math.floor((selisih % (1000*60))/1000);
+
+},1000);
+
+// RSVP WHATSAPP
+function kirimRSVP() {
+    let nama = document.getElementById("nama").value;
+    let hadir = document.getElementById("hadir").value;
+
+    if(nama.trim() === "") {
+        alert("Masukkan nama terlebih dahulu!");
+        return;
+    }
+
+    let pesan = `Halo, saya ${nama}. Konfirmasi undangan pernikahan ADIT & MARELLA: ${hadir}.`;
+
+    // GANTI NOMOR WHATSAPP DI BAWAH
+    let nomor = "6287771475645";
+
+    window.open(
+        "https://wa.me/" + nomor + "?text=" + encodeURIComponent(pesan),
+        "_blank"
+    );
+}
+
+</script>
+
+</body>
+</html>
